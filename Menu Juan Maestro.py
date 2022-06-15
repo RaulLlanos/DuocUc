@@ -31,6 +31,7 @@ while opt != 4:
                 print("La edad debe estar entre 1 y 110 ")
                 break
             genero = input("Ingrese su genero: ")
+            genero = genero.upper()
             if genero!="M" and genero !="F" and genero !="O":
                 print("Genero deber ser M, F u O ")
                 break
@@ -59,12 +60,12 @@ while opt != 4:
             for cliente in clientes:
                 if cliente[0] == run:
                     fecha = input("Inserte fecha suscripcion: ")
-                    cliente[9]= cliente[9] + "desde\n" + fecha
+                    cliente[9]= cliente[9] + " desde\n" + fecha
         if opt==3:
             run=int(input("Ingrese rut de cliente que desea buscar: "))
             for cliente in clientes:
                 if cliente[0] == run:
-                    print(f"Rut del cliente: {cliente[0]}\n")
+                    print(f"\nRut del cliente: {cliente[0]}\n")
                     print(f"Nombre del cliente: {cliente[1]}\n")
                     print(f"Direccion del cliente: {cliente[2]}\n")
                     print(f"Comuna del cliente: {cliente[3]}\n")
@@ -86,4 +87,3 @@ while opt != 4:
         print("Debe ingresar un valor numerico (1-4)")
     if  opt>4 :
         raise Exception("Opcion debe estar entre 1 y 4")
-    
